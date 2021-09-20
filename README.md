@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project was presented 17th September 2021 with a 14-day deadline (1st October 2021). It is an individual challenge, where I (Johnny See) plan to implement most of it in React.
+This project was presented 17 September 2021 with a 14-day deadline (1 October 2021). It is an individual challenge, where I (Johnny See) plan to implement most of it in React.
 
 I will use an agile approach to this with Test Driven Development, mainly using tools such as Cypress and Jest.
 
