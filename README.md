@@ -6,7 +6,13 @@ This project was presented 17th September 2021 with a 14-day deadline (1st Octob
 
 I will use an agile approach to this with Test Driven Development, mainly using tools such as Cypress and Jest.
 
+I aim to implement the game logic with a web based interface where the user can first of all play against a computer (easy part first). The computer should generate a random number 1/3 (rock, paper and scissor) and match it with the user's choice.
+
+I also plan to implement a "slots-like" UI to increase the UX.
+
 The Customer/User in this case is Craft Academy, where I will present my planning, problems and the results on Mondays and Fridays.
+
+
 
 ## User Stories
 
