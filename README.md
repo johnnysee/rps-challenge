@@ -24,7 +24,7 @@ I want to play Rock - Papper - Scissors
 
 ```
 As a user
-In order to play when not my friends are available
+In order to play when my friends are unavailable
 I would like to play against the computer
 ```
 
