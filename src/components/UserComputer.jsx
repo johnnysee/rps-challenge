@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Header, Container, Button, Message } from "semantic-ui-react";
 
 const UserComputer = () => {
   const [userChoice, setUserChoice] = useState(null);
@@ -9,7 +10,6 @@ const UserComputer = () => {
   const fetchComputerChoice = () => {
     const randomNumber = Math.floor(Math.random() * options.length);
     setComputerValue(options[randomNumber]);
-
   };
 
   useEffect(() => {
@@ -17,22 +17,21 @@ const UserComputer = () => {
       case "ROCKSCISSORS":
       case "PAPERROCK":
       case "SCISSORSPAPER":
-        setComparison("User wins!");
+        setComparison("USER WINS!");
         break;
       case "SCISSORSROCK":
       case "PAPERSCISSORS":
       case "ROCKPAPER":
-        setComparison("User lose!");
+        setComparison("USER LOSE!");
         break;
       case "SCISSORSSCISSORS":
       case "PAPERPAPER":
       case "ROCKROCK":
-        setComparison("It is a draw!");
+        setComparison("IT IS A DRAW!");
         break;
-        default:
+      default:
     }
-
-  }, [userChoice, computerValue])
+  }, [userChoice, computerValue]);
 
   const handleClick = (value) => {
     setUserChoice(value);
@@ -40,16 +39,25 @@ const UserComputer = () => {
   };
 
   return (
-    <div>
-      <h2 data-cy="user">User's choose: {userChoice}</h2>
+    <Container>
+      <Header as="h1" data-cy="header">
+        Rock - Paper - Scissors
+      </Header>
+      <Header as="h2" data-cy="user">
+        User's choose: {userChoice}
+      </Header>
       {options.map((choice, index) => (
-        <button key={index} data-cy="btn" onClick={() => handleClick(choice)}>
+        <Button color='blue' key={index} data-cy="btn" onClick={() => handleClick(choice)}>
           {choice}
-        </button>
+        </Button>
       ))}
-      <h2 data-cy="computer">Computer choose: {computerValue}</h2>
-      <h2 data-cy="comparison">{comparison}</h2>
-    </div>
+      <Header as="h2" data-cy="computer">
+        Computer choose: {computerValue}
+      </Header>
+      <Message data-cy="comparison">
+        {comparison}
+      </Message>
+    </Container>
   );
 };
 
