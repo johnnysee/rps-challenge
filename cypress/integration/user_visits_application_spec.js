@@ -16,16 +16,12 @@ describe("users can visit application", () => {
   })
 
   it ('is expected to display a button Rock', () => {
-    cy.get('[data-cy=rock]').should('contain', 'Rock')
+    cy.get('[data-cy=btn]').should('contain', 'ROCK')
   })
-
   it ('is expected to display a button Paper', () => {
-    cy.get('[data-cy=paper]').should('contain', 'Paper')
+    cy.get('[data-cy=btn]').should('contain', 'PAPER')
   })
-
   it ('is expected to display a button Scissors', () => {
-    cy.get('[data-cy=scissors]').should('contain', 'Scissors')
+    cy.get('[data-cy=btn]').should('contain', 'SCISSORS')
   })
-
-
 })

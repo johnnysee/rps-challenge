@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const UserComputer = () => {
   const [userChoice, setUserChoice] = useState(null);
-  const options = ["rock", "paper", "scissors"];
+  const options = ["ROCK", "PAPER", "SCISSORS"];
   const [computerValue, setComputerValue] = useState(null);
   const [comparison, setComparison] = useState(null);
 
@@ -14,19 +14,19 @@ const UserComputer = () => {
 
   useEffect(() => {
     switch (userChoice + computerValue) {
-      case "rockscissors":
-      case "paperrock":
-      case "scissorspaper":
+      case "ROCKSCISSORS":
+      case "PAPERROCK":
+      case "SCISSORSPAPER":
         setComparison("User wins!");
         break;
-      case "scissorsrock":
-      case "paperscissors":
-      case "rockpaper":
+      case "SCISSORSROCK":
+      case "PAPERSCISSORS":
+      case "ROCKPAPER":
         setComparison("User lose!");
         break;
-      case "scissorsscissors":
-      case "paperpaper":
-      case "rockrock":
+      case "SCISSORSSCISSORS":
+      case "PAPERPAPER":
+      case "ROCKROCK":
         setComparison("It is a draw!");
         break;
         default:
@@ -43,12 +43,12 @@ const UserComputer = () => {
     <div>
       <h2 data-cy="user">User's choose: {userChoice}</h2>
       {options.map((choice, index) => (
-        <button key={index} data-cy="scissors" onClick={() => handleClick(choice)}>
+        <button key={index} data-cy="btn" onClick={() => handleClick(choice)}>
           {choice}
         </button>
       ))}
       <h2 data-cy="computer">Computer choose: {computerValue}</h2>
-      <h2>{comparison}</h2>
+      <h2 data-cy="comparison">{comparison}</h2>
     </div>
   );
 };
