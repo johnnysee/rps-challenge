@@ -8,11 +8,11 @@ describe("users can visit application", () => {
   })
 
   it ('is expected true to be true', () => {
-    cy.get('[data-cy=user]').should('contain', 'User - Paper - Scissors')
+    cy.get('[data-cy=user]').should('contain', 'User')
   })
 
   it ('is expected true to be true', () => {
-    cy.get('[data-cy=computer]').should('contain', 'Computer - Paper - Scissors')
+    cy.get('[data-cy=computer]').should('contain', 'Computer')
   })
 
 
