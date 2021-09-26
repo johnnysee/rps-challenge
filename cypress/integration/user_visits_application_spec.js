@@ -8,23 +8,23 @@ describe("users can visit application", () => {
   })
 
   it ('is expected to display User', () => {
-    cy.get('[data-cy=user]').should('contain', 'User')
+    cy.get('[data-cy=user]').should('contain', "User's choose")
   })
 
   it ('is expected to display Computer', () => {
     cy.get('[data-cy=computer]').should('contain', 'Computer')
   })
 
-  it ('is expected to display a button 1', () => {
-    cy.get('[data-cy=rock]').click()
+  it ('is expected to display a button Rock', () => {
+    cy.get('[data-cy=rock]').should('contain', 'Rock')
   })
 
-  it ('is expected to display a button 2', () => {
-    cy.get('[data-cy=paper]').click()
+  it ('is expected to display a button Paper', () => {
+    cy.get('[data-cy=paper]').should('contain', 'Paper')
   })
 
-  it ('is expected to display a button 3', () => {
-    cy.get('[data-cy=scissor]').click()
+  it ('is expected to display a button Scissors', () => {
+    cy.get('[data-cy=scissors]').should('contain', 'Scissors')
   })
 
 
