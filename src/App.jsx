@@ -8,6 +8,7 @@ const App = () => {
       <h1 data-cy="header">Rock - Paper - Scissors</h1>
       <User />
       <h2 data-cy="computer">Computer</h2>
+      <p>{(Math.round(Math.random()*2)+1)}</p>
     </div>
   )
 }
