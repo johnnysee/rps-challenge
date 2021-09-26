@@ -2,11 +2,12 @@ import React, { useState } from "react";
 
 const UserComputer = () => {
   const [userChoice, setUserChoice] = useState(null);
+  const options = ['rock', 'paper', 'scissors']
   const [computerValue, setComputerValue] = useState(null)
 
-  const computerChoice = () => {
-    const randomNumber = Math.round(Math.random()*2)+1
-    setComputerValue(randomNumber)
+  const fetchComputerChoice = () => {
+    const randomNumber = Math.floor(Math.random()*options.length)
+    setComputerValue(options[randomNumber])
   }
 
   const handleClick = (value) => {
@@ -16,15 +17,9 @@ const UserComputer = () => {
   return (
     <div>
       <h2 data-cy="user">User's choose: {userChoice}</h2>
-      <button data-cy="rock" onClick={() => handleClick("Rock")}>
-        Rock
-      </button>
-      <button data-cy="paper" onClick={() => handleClick("Paper")}>
-        Paper
-      </button>
-      <button data-cy="scissors" onClick={() => handleClick("Scissors")}>
-        Scissors
-      </button>
+      {options.map(choice => <button data-cy="scissors" onClick={() => handleClick(choice)}>{choice}</button>)}
+      <h2 data-cy="computer">Computer</h2>
+      <p>Hi</p>
     </div>
   );
 };
