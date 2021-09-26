@@ -1,14 +1,13 @@
 import React from 'react'
-import User from './components/User'
+import UserComputer from './components/UserComputer'
 
 const App = () => {
-
   return (
     <div>
       <h1 data-cy="header">Rock - Paper - Scissors</h1>
-      <User />
+      <UserComputer />
       <h2 data-cy="computer">Computer</h2>
-      <p>{(Math.round(Math.random()*2)+1)}</p>
+      <p>Hi</p>
     </div>
   )
 }

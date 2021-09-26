@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 
-const User = () => {
+const UserComputer = () => {
   const [userChoice, setUserChoice] = useState(null);
+  const [computerValue, setComputerValue] = useState(null)
+
+  const computerChoice = () => {
+    const randomNumber = Math.round(Math.random()*2)+1
+    setComputerValue(randomNumber)
+  }
 
   const handleClick = (value) => {
     setUserChoice(value);
@@ -23,4 +29,4 @@ const User = () => {
   );
 };
 
-export default User;
+export default UserComputer;
