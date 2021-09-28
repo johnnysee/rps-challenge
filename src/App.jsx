@@ -1,11 +1,10 @@
 import React from 'react'
-import Todo from './components/todo'
+import UserComputer from './components/UserComputer'
 
 const App = () => {
   return (
     <div>
-      <h1>Rock - Paper - Scissors</h1>
-      <Todo />
+      <UserComputer />
     </div>
   )
 }
