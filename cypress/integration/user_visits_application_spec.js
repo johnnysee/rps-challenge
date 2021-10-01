@@ -8,7 +8,7 @@ describe("users can visit application", () => {
   })
 
   it ('is expected to display User', () => {
-    cy.get('[data-cy=user]').should('contain', "User's choose")
+    cy.get('[data-cy=user]').should('contain', "You choose")
   })
 
   it ('is expected to display Computer', () => {
