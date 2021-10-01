@@ -44,7 +44,7 @@ const UserComputer = () => {
         Rock - Paper - Scissors
       </Header>
       <Header as="h2" data-cy="user">
-        User's choose: {userChoice}
+        You choose: {userChoice}
       </Header>
       {options.map((choice, index) => (
         <Button color='blue' key={index} data-cy="btn" onClick={() => handleClick(choice)}>
