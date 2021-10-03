@@ -1,5 +1,8 @@
 # Rock - Paper - Scissors Challenge
 
+Individual
+Deployed with Netlify: https://johnnysee-rps.netlify.app/
+
 ## Project Overview
 
 This project was presented 17 September 2021 with a 14-day deadline (1 October 2021). It is an individual challenge, where I (Johnny See) plan to implement most of it in React.
